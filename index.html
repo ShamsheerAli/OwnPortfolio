@@ -1,83 +1,232 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shamsheer Ali | UX Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shamsheer Ali — UX Designer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/feather-icons/dist/feather.min.css">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Shamsheer Ali — UX Designer | Portfolio" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Shamsheer Ali</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="nav-wrap" id="top">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Shamsheer Ali homepage">
+        <!-- simple mark -->
+        <svg viewBox="0 0 100 100" width="36" height="36" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#0b6cff" stroke-width="6"/></svg>
+        <span class="brand-name">Shamsheer Ali</span>
+      </a>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm Shamsheer Ali</h1>
-      <p>Your friendly neighborhood UX Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="cta" id="theme-toggle" aria-label="Toggle light dark">Dark</button>
     </div>
-  </section>
+  </header>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>I am a passionate UX designer learning from Google’s UX Design course. I love creating intuitive and visually appealing designs that solve real problems.</p>
-    <div class="skills">
-      <div class="skill">UX Research</div>
-      <div class="skill">Wireframing</div>
-      <div class="skill">Prototyping</div>
-      <div class="skill">Figma & Adobe XD</div>
-    </div>
-  </section>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="reveal">Hi — I'm <span class="accent">Shamsheer</span></h1>
+          <p class="lead reveal-delay">A UX Designer-in-training (Google UX Certificate) building useful, human-centered interfaces. I combine research-led thinking with pixel care.</p>
+          <div class="hero-actions reveal-delay-2">
+            <a class="btn primary" href="#projects">View my work</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <img src="project1.png" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Short description of your UX project.</p>
+          <div class="skills pills reveal-delay-3" aria-hidden="true">
+            <span>UX Research</span>
+            <span>Wireframing</span>
+            <span>Prototyping</span>
+            <span>Figma</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- floating card stack -->
+          <div class="float-wrap">
+            <div class="card floating" style="--i:0;">
+              <img src="assets/project1.jpg" alt="Project snapshot 1">
+              <div class="card-caption">E-commerce checkout redesign</div>
+            </div>
+
+            <div class="card floating" style="--i:1;">
+              <img src="assets/project2.jpg" alt="Project snapshot 2">
+              <div class="card-caption">Mobile onboarding flow</div>
+            </div>
+
+            <div class="glass floating" style="--i:2;" aria-hidden="true">
+              <div class="glass-inner">
+                <h4>Dev + UX</h4>
+                <p>Design systems, prototypes, and pragmatic engineering collaboration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="project2.png" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Short description of your UX project.</p>
-      </div>
-      <div class="project-card">
-        <img src="project3.png" alt="Project 3">
-        <h3>Project 3</h3>
-        <p>Short description of your UX project.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:shamsheer@example.com">shamsheer@example.com</a></p>
-    <div class="social-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Dribbble</a>
-    </div>
-  </section>
+      <!-- hero subtle SVG wave / parallax layer -->
+      <svg class="hero-blob" viewBox="0 0 800 300" aria-hidden="true">
+        <path d="M0 100 Q200 0 400 100 T800 100 L800 300 L0 300 Z"></path>
+      </svg>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Shamsheer Ali. All rights reserved.</p>
-  </footer>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">About me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal-delay">
+            <p>I’m transitioning into UX after working on web projects. Currently on the Google UX Design certificate — I love research, low-fidelity testing, and turning insights into elegant flows.</p>
+            <ul class="about-list">
+              <li><strong>Role</strong> — UX Designer (aspiring)</li>
+              <li><strong>Tools</strong> — Figma, Miro, Notion, basic HTML/CSS</li>
+              <li><strong>Focus</strong> — Usability, clarity & accessibility</li>
+            </ul>
+          </div>
+          <div class="about-stats reveal-delay-2">
+            <div class="stat">
+              <div class="stat-value">3+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">30+</div>
+              <div class="stat-label">Hours research</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">Ongoing</div>
+              <div class="stat-label">Google UX course</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title reveal">Selected Projects</h2>
+
+        <div class="projects-grid">
+          <!-- project item -->
+          <article class="project-card reveal-delay">
+            <figure class="proj-media">
+              <img src="assets/project1.jpg" alt="Checkout redesign">
+            </figure>
+            <div class="proj-body">
+              <h3>Checkout Redesign</h3>
+              <p class="muted">Improved conversion by simplifying steps and clarifying error states. Research-led decisions & prototype tests.</p>
+              <div class="proj-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">Prototype</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-delay-2">
+            <figure class="proj-media">
+              <img src="assets/project2.jpg" alt="Onboarding flow">
+            </figure>
+            <div class="proj-body">
+              <h3>Onboarding Flow</h3>
+              <p class="muted">A mobile-first onboarding flow focusing on retention and progressive disclosure of information.</p>
+              <div class="proj-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">Prototype</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-delay-3">
+            <figure class="proj-media">
+              <img src="assets/project3.jpg" alt="Dashboard concept">
+            </figure>
+            <div class="proj-body">
+              <h3>Dashboard Concept</h3>
+              <p class="muted">Data hierarchy, micro-interactions and responsive layout considerations for admin tasks.</p>
+              <div class="proj-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="link">Prototype</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section process">
+      <div class="container">
+        <h2 class="section-title reveal">My process</h2>
+        <div class="process-grid">
+          <div class="process-item reveal-delay">
+            <h4>Discover</h4>
+            <p>Stakeholder interviews, competitor review, and problem framing.</p>
+          </div>
+          <div class="process-item reveal-delay-2">
+            <h4>Define</h4>
+            <p>Affinity mapping, personas, and user journeys.</p>
+          </div>
+          <div class="process-item reveal-delay-3">
+            <h4>Design & Validate</h4>
+            <p>Wireframes, prototypes, usability testing, and iterations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-card reveal">
+          <h2>Let's work together</h2>
+          <p>Contact me for UX projects, contract work, or feedback on my case studies.</p>
+          <a class="btn primary" href="mailto:shamsheer@example.com">Email me</a>
+        </div>
+
+        <form class="contact-form reveal-delay-2" action="#" onsubmit="return false;" aria-label="Contact form">
+          <label>
+            <span class="label">Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span class="label">Email</span>
+            <input type="email" name="email" placeholder="you@domain.com" required>
+          </label>
+          <label>
+            <span class="label">Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Shamsheer Ali — Designed with ❤️</p>
+        <nav class="footer-nav" aria-label="Footer social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Dribbble">Dribbble</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
